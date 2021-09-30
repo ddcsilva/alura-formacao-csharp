@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13-LacoDeRepeticaoFor3", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-MultiploDe3", "14-MultiploDe3\14-MultiploDe3.csproj", "{A82163C2-0BA0-40D5-AFC7-BF09A37D687F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15-Fatorial", "15-Fatorial\15-Fatorial.csproj", "{CBB3731A-74DB-472C-92DE-2D907D112C40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{A82163C2-0BA0-40D5-AFC7-BF09A37D687F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A82163C2-0BA0-40D5-AFC7-BF09A37D687F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A82163C2-0BA0-40D5-AFC7-BF09A37D687F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB3731A-74DB-472C-92DE-2D907D112C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB3731A-74DB-472C-92DE-2D907D112C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB3731A-74DB-472C-92DE-2D907D112C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB3731A-74DB-472C-92DE-2D907D112C40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
