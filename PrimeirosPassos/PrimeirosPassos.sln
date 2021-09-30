@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-ConversoesEOutrosTiposNum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-CaracteresETextos", "5-CaracteresETextos\5-CaracteresETextos.csproj", "{E4563350-44DD-42B5-B574-AF38259DC100}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-Condicional", "6-Condicional\6-Condicional.csproj", "{88BD1561-9CFF-4C99-A519-E169262139BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E4563350-44DD-42B5-B574-AF38259DC100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4563350-44DD-42B5-B574-AF38259DC100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4563350-44DD-42B5-B574-AF38259DC100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88BD1561-9CFF-4C99-A519-E169262139BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88BD1561-9CFF-4C99-A519-E169262139BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88BD1561-9CFF-4C99-A519-E169262139BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88BD1561-9CFF-4C99-A519-E169262139BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
