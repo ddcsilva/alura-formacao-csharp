@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-CriandoVariaveis", "2-Cri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-TestePontoFlutuante", "3-TestePontoFlutuante\3-TestePontoFlutuante.csproj", "{B1EEEB4D-DCA6-4748-98C0-974C93AAD664}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-ConversoesEOutrosTiposNumericos", "4-ConversoesEOutrosTiposNumericos\4-ConversoesEOutrosTiposNumericos.csproj", "{C1757C6C-86AE-429C-978D-5110661E07AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B1EEEB4D-DCA6-4748-98C0-974C93AAD664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1EEEB4D-DCA6-4748-98C0-974C93AAD664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1EEEB4D-DCA6-4748-98C0-974C93AAD664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1757C6C-86AE-429C-978D-5110661E07AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1757C6C-86AE-429C-978D-5110661E07AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1757C6C-86AE-429C-978D-5110661E07AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1757C6C-86AE-429C-978D-5110661E07AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
