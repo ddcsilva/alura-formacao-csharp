@@ -2,11 +2,11 @@
 {
     public class ContaCorrente
     {
-        public int agencia;
-        public int numero;
-        private double _saldo = 100;
-
         public Cliente Titular { get; set; }
+        public int Agencia { get; set; }
+        public int Numero { get; set; }
+
+        private double _saldo = 100;
 
         public double Saldo {
             get 
