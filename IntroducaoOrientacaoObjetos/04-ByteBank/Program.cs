@@ -17,6 +17,24 @@ namespace _04_ByteBank
 
             contaDoDanilo.Depositar(500);
             Console.WriteLine("Após Depósito: " + contaDoDanilo.saldo);
+
+            ContaCorrente contaDaRosana = new ContaCorrente();
+            contaDaRosana.titular = "Rosana";
+
+            Console.WriteLine("Saldo do Danilo: " + contaDoDanilo.saldo);
+            Console.WriteLine("Saldo da Rosana: " + contaDaRosana.saldo);
+
+            bool resultadoTransferencia = contaDoDanilo.Transferir(2000, contaDaRosana);
+
+            Console.WriteLine("Resultado da Transferência: " + resultadoTransferencia);
+
+            Console.WriteLine("Saldo do Danilo: " + contaDoDanilo.saldo);
+            Console.WriteLine("Saldo da Rosana: " + contaDaRosana.saldo);
+
+            contaDaRosana.Transferir(100, contaDoDanilo);
+
+            Console.WriteLine("Saldo do Danilo: " + contaDoDanilo.saldo);
+            Console.WriteLine("Saldo da Rosana: " + contaDaRosana.saldo);
         }
     }
 }
