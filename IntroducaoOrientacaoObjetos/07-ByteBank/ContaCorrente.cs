@@ -5,6 +5,7 @@
         public Cliente Titular { get; set; }
         public int Agencia { get; set; }
         public int Numero { get; set; }
+        public static int TotalDeContasCriadas { get; private set; }
 
         private double _saldo = 100;
 
@@ -12,6 +13,8 @@
         {
             Agencia = agencia;
             Numero = numero;
+
+            TotalDeContasCriadas++;
         }
 
         public double Saldo {
