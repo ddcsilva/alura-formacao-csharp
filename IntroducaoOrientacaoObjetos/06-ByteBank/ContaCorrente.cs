@@ -2,54 +2,54 @@
 {
     public class ContaCorrente
     {
-        public Cliente titular;
         public int agencia;
         public int numero;
-        private double saldo = 100;
+        private double _saldo = 100;
 
-        public void DefinirSaldo(double saldo)
-        {
-            if (saldo < 0)
-            {
-                return;
-            }
-            else
-            {
-                this.saldo = saldo;
-            }
-        }
+        public Cliente Titular { get; set; }
 
-        public double ObterSaldo()
-        {
-            return saldo;
+        public double Saldo {
+            get 
+            {
+                return _saldo;
+            } 
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+
+                _saldo = value;
+            }
         }
 
         public bool Sacar(double valor)
         {
-            if (saldo < valor)
+            if (_saldo < valor)
             {
                 return false;
             }
             else
             {
-                saldo -= valor;
+                _saldo -= valor;
                 return true;
             }
         }
 
         public void Depositar(double valor)
         {
-            saldo += valor;
+            _saldo += valor;
         }
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (saldo < valor)
+            if (_saldo < valor)
             {
                 return false;
             }
 
-            saldo -= valor;
+            _saldo -= valor;
             contaDestino.Depositar(valor);
             return true;
         }
