@@ -2,30 +2,39 @@
 {
     public class ContaCorrente
     {
-        public Cliente Titular { get; set; }
-        public int Agencia { get; set; }
-        public int Numero { get; set; }
-
         public static double TaxaOperacao { get; private set; }
+
         public static int TotalDeContasCriadas { get; private set; }
 
-        private double _saldo = 100;
+        public Cliente Titular { get; set; }
 
-        public ContaCorrente(int agencia, int numero)
+        public int Numero { get; set; }
+
+        private int _agencia;
+        public int Agencia
         {
-            Agencia = agencia;
-            Numero = numero;
+            get
+            {
+                return _agencia;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    return;
+                }
 
-            TaxaOperacao = 30 / TotalDeContasCriadas;
-
-            TotalDeContasCriadas++;
+                _agencia = value;
+            }
         }
 
-        public double Saldo {
-            get 
+        private double _saldo = 100;
+        public double Saldo
+        {
+            get
             {
                 return _saldo;
-            } 
+            }
             set
             {
                 if (value < 0)
@@ -37,17 +46,25 @@
             }
         }
 
+        public ContaCorrente(int agencia, int numero)
+        {
+            Agencia = agencia;
+            Numero = numero;
+
+            TaxaOperacao = 30 / TotalDeContasCriadas;
+
+            TotalDeContasCriadas++;
+        }
+
         public bool Sacar(double valor)
         {
             if (_saldo < valor)
             {
                 return false;
             }
-            else
-            {
-                _saldo -= valor;
-                return true;
-            }
+
+            _saldo -= valor;
+            return true;
         }
 
         public void Depositar(double valor)
