@@ -41,7 +41,7 @@ namespace ByteBank
                 throw new ArgumentException("O argumento agencia deve ser maior que 0.", nameof(agencia));
             }
 
-            if (numero <= 0)
+            if(numero <= 0)
             {
                 throw new ArgumentException("O argumento numero deve ser maior que 0.", nameof(numero));
             }
@@ -80,12 +80,12 @@ namespace ByteBank
             {
                 throw new ArgumentException("Valor inválido para a transferência.", nameof(valor));
             }
-
+            
             try
             {
                 Sacar(valor);
             }
-            catch (SaldoInsuficienteException ex)
+            catch(SaldoInsuficienteException ex)
             {
                 ContadorTransferenciasNaoPermitidas++;
                 throw new OperacaoFinanceiraException("Operação não realizada.", ex);
