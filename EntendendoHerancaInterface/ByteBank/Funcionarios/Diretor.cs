@@ -1,17 +1,12 @@
-﻿namespace ByteBank.Funcionarios
-{
-    public class Diretor : Funcionario
-    {
-        public string Senha { get; set; }
+﻿using ByteBank.Sistemas;
 
+namespace ByteBank.Funcionarios
+{
+    public class Diretor : Autenticavel
+    {
         public Diretor(string cpf) : base(5000, cpf)
         {
             System.Console.WriteLine("Criando DIRETOR");
-        }
-
-        public bool Autenticar(string senha)
-        {
-            return Senha == senha;
         }
 
         public override double GetBonificacao()

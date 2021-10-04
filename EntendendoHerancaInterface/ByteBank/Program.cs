@@ -20,13 +20,13 @@ namespace ByteBank
             roberta.Nome = "Roberta";
             roberta.Senha = "123";
 
+            sistema.Logar(roberta, "123");
+            sistema.Logar(roberta, "abc");
+
             GerenteDeConta camila = new GerenteDeConta("326.985.628-89");
             camila.Nome = "Camila";
             camila.Senha = "abc";
 
-            sistema.Logar(roberta, "123");
-            sistema.Logar(roberta, "abc");
-            
             sistema.Logar(camila, "123");
             sistema.Logar(camila, "abc");
         }
