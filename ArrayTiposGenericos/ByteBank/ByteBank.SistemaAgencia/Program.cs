@@ -6,22 +6,32 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            // Array de inteiros com 5 posições
-            int[] idades = new int[5];
+            // Array de inteiros com 6 posições
+            int[] idades = new int[6];
 
             idades[0] = 15;
             idades[1] = 28;
             idades[2] = 35;
             idades[3] = 50;
             idades[4] = 28;
+            idades[5] = 60;
 
-            int idadeNoIndice4 = idades[4];
-            Console.WriteLine(idadeNoIndice4);
+            Console.WriteLine(idades.Length);
 
-            Console.WriteLine(idades[2 + 1]);
+            int acumulador = 0;
 
-            int indice = 2;
-            Console.WriteLine(idades[indice]);
+            for (int i = 0; i < idades.Length; i++)
+            {
+                int idade = idades[i];
+
+                Console.WriteLine($"Acessando o array idades no índice {i}");
+                Console.WriteLine($"Valor de idades[{i}] = {idade}");
+
+                acumulador += idade;
+            }
+
+            int media = acumulador / idades.Length;
+            Console.WriteLine($"Média de Idades = {media}");
         }
     }
 }
