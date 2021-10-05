@@ -2,6 +2,9 @@
 
 namespace ByteBank.Modelos
 {
+    /// <summary>
+    /// Define um Conta Corrente do banco ByteBank.
+    /// </summary>    
     public class ContaCorrente
     {
         private static int TaxaOperacao;
@@ -34,6 +37,11 @@ namespace ByteBank.Modelos
             }
         }
 
+        /// <summary>
+        /// Cria uma instância de ContaCorrente com os argumentos utilizados.
+        /// </summary>
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor maior que zero</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que zero</param>
         public ContaCorrente(int agencia, int numero)
         {
             if (numero <= 0)
