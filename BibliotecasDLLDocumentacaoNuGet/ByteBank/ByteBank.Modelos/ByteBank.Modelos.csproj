@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Projetos\alura-formacao-csharp\BibliotecasDLLDocumentacaoNuGet\ByteBank\ByteBank.Modelos\ByteBank.Modelos.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
