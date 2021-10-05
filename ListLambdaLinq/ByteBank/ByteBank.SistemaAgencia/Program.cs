@@ -9,7 +9,39 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            List<int> idades = new List<int>();
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(341, 57480),
+                new ContaCorrente(342, 45698),
+                new ContaCorrente(340, 85456),
+                new ContaCorrente(290, 54756),
+            };
+
+            contas.Sort();
+
+            foreach (var conta in contas)
+            {
+                Console.WriteLine($"Conta número {conta.Numero} Agência {conta.Agencia}");
+            }
+        }
+
+        static void TestaSort()
+        {
+            var nomes = new List<string>()
+            {
+                "Danilo",
+                "Rosana",
+                "Raquel"
+            };
+
+            nomes.Sort();
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
+
+            var idades = new List<int>();
 
             idades.Add(1);
             idades.Add(5);
@@ -19,15 +51,14 @@ namespace ByteBank.SistemaAgencia
             idades.Add(61);
 
             idades.AdicionarVarios(1, 2, 3, 9);
+            idades.AdicionarVarios(99, -1);
 
-            // string danilo = "Danilo";
-            // danilo.TesteGenerico<int>();
+            idades.Sort();
 
             for (int i = 0; i < idades.Count; i++)
             {
                 Console.WriteLine(idades[i]);
             }
-
         }
 
         static int SomarVarios(params int[] numeros)
