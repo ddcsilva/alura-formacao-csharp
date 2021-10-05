@@ -3,6 +3,7 @@ using ByteBank.SistemaAgencia.Comparadores;
 using ByteBank.SistemaAgencia.Extensoes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -12,58 +13,37 @@ namespace ByteBank.SistemaAgencia
         {
             var contas = new List<ContaCorrente>()
             {
-                new ContaCorrente(341, 57480),
-                new ContaCorrente(342, 45678),
-                new ContaCorrente(340, 1),
-                new ContaCorrente(340, 99999),
-                new ContaCorrente(340, 48950),
-                new ContaCorrente(290, 18950)
+                new ContaCorrente(341, 1),
+                new ContaCorrente(342, 999),
+                null,
+                new ContaCorrente(340, 4),
+                new ContaCorrente(340, 456),
+                new ContaCorrente(340, 10),
+                null,
+                null,
+                new ContaCorrente(290, 123)
             };
 
             // contas.Sort(); ~~> Chamar a implementação dada em IComparable
 
-            contas.Sort(new ComparadorContaCorrentePorAgencia());
+            // contas.Sort(new ComparadorContaCorrentePorAgencia());
 
-            foreach (var conta in contas)
+            IOrderedEnumerable<ContaCorrente> contasOrdenadas =
+                contas.OrderBy(conta => {
+                    if (conta == null)
+                    {
+                        return int.MinValue;
+                    }
+
+                    return conta.Numero;
+                });
+
+            foreach (var conta in contasOrdenadas)
             {
-                Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
-            }
-
-        }
-
-        static void TestaSort()
-        {
-            var nomes = new List<string>()
-            {
-                "Danilo",
-                "Rosana",
-                "Raquel"
-            };
-
-            nomes.Sort();
-
-            foreach (var nome in nomes)
-            {
-                Console.WriteLine(nome);
-            }
-
-            var idades = new List<int>();
-
-            idades.Add(1);
-            idades.Add(5);
-            idades.Add(14);
-            idades.Add(25);
-            idades.Add(38);
-            idades.Add(61);
-
-            idades.AdicionarVarios(1, 2, 3, 9);
-            idades.AdicionarVarios(99, -1);
-
-            idades.Sort();
-
-            for (int i = 0; i < idades.Count; i++)
-            {
-                Console.WriteLine(idades[i]);
+                if (conta != null)
+                {
+                    Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+                }
             }
         }
 
